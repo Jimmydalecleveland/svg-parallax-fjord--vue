@@ -72,13 +72,13 @@ function animateElement(
 
 export default {
   name: 'Trees',
-  created() {
+  mounted() {
     /*
      * On mount, grab every tree in the svg, sort them,
      * stagger a few, and set state with all their paths
      * for future morphing by Snap.
      */
-    const trees = document.querySelectorAll('.tree')
+    const trees = this.$refs.svgRef.querySelectorAll('.tree')
     // Turn NodeList into array to get .sort method
     const sortedTrees = [...trees].sort((a, b) => {
       const aIdNumber = Number(a.id.split('tree')[1])
@@ -172,7 +172,7 @@ svg {
 </style>
 
 <template>
-  <svg id="trees" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 1000">
+  <svg ref="svgRef" id="trees" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2560 1000">
     <g id="tree13" class="tree">
       <g>
         <rect class="cls-1" x="1142.86" y="781.27" width="19.13" height="43.44" />
