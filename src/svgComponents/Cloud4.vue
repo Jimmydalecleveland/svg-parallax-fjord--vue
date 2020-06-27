@@ -1,0 +1,43 @@
+<script>
+export default {
+  name: 'Cloud4',
+}
+</script>
+
+<style scoped>
+.parallax-wrapper {
+  position: absolute;
+}
+svg {
+  animation: cloud1 30s linear infinite alternate;
+}
+.cls-1 {
+  fill: #e7ebf2;
+}
+@keyframes cloud1 {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-300px, 0, 0);
+  }
+}
+</style>
+
+<template>
+  <div class="parallax-wrapper">
+    <svg
+      id="cloud_4_light"
+      data-name="cloud 4 light"
+      xmlns="http://www.w3.org/2000/svg"
+      width="2560"
+      height="1000"
+      viewBox="0 0 2560 1000"
+    >
+      <path
+        class="cls-1"
+        d="M1661.48,351.32c-3.1-32.73-33.19-59.75-71.58-62.31a84.45,84.45,0,0,0-38.24,6.2,76,76,0,0,0-39.79-1.29,60.6,60.6,0,0,0-79.81-41.05,46.1,46.1,0,0,0-13.47-2.94,45.18,45.18,0,0,0-26,6,31.88,31.88,0,0,0-59.26,14.54c0,.64-.06,1.28-.07,1.92a39.08,39.08,0,0,0-32.33,24.78c-47.32,2.44-85.86,24.11-96,54.1Z"
+      />
+    </svg>
+  </div>
+</template>
