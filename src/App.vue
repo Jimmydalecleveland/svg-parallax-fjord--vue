@@ -49,6 +49,11 @@ export default {
   data() {
     return {
       scrollY: 0,
+      background: {
+        red: 0,
+        green: 135,
+        blue: 213,
+      },
     }
   },
   created() {
@@ -60,6 +65,11 @@ export default {
   methods: {
     handleScroll() {
       this.scrollY = window.scrollY
+      this.background = {
+        red: window.scrollY / 2.75,
+        green: 135 - window.scrollY / 17,
+        blue: 213 - scrollY / 5.4,
+      }
     },
   },
 }
@@ -96,7 +106,10 @@ body {
 
 <template>
   <div>
-    <div class="parallax-container">
+    <div
+      class="parallax-container"
+      v-bind:style="{ background: `rgb(${background.red}, ${background.green}, ${background.blue})` }"
+    >
       <Cloud2 v-bind:style="{ transform: `translateY(${-scrollY * 0.2}px)`}" />
       <Cloud4 v-bind:style="{ transform: `translateY(${-scrollY * 0.3}px)`}" />
       <Cloud5 v-bind:style="{ transform: `translateY(${-scrollY * 0.2}px)`}" />
