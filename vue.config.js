@@ -1,7 +1,8 @@
 module.exports = {
   pages: {
     index: {
-      title: 'JimmyDC | SVG Parallax Fjord -- Vue'
+      title: 'JimmyDC | SVG Parallax Fjord -- Vue',
+      entry: 'src/main.js'
     }
   }
 }
