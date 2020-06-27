@@ -7,7 +7,7 @@ import Cloud5 from './svgComponents/Cloud5'
 import Mountains from './svgComponents/Mountains'
 import Hills from './svgComponents/Hills'
 import Trees from './svgComponents/Trees'
-// import WindTrail from './svgComponents/WindTrail'
+import WindTrail from './svgComponents/WindTrail'
 import Ground from './svgComponents/Ground'
 import Wave1 from './svgComponents/Wave1'
 import Wave2 from './svgComponents/Wave2'
@@ -24,6 +24,7 @@ export default {
     Mountains,
     Hills,
     Trees,
+    WindTrail,
     Ground,
     Wave1,
     Wave2,
@@ -101,6 +102,7 @@ body {
       <Cloud3 v-bind:style="{ transform: `translateY(${-scrollY * 0.3}px)`}" />
       <Hills v-bind:style="{ transform: `translateY(${-scrollY * 0.6}px)`}" />
       <Trees v-bind:style="{ transform: `translateY(${-scrollY * 0.8}px)`}" />
+      <WindTrail v-bind:style="{ transform: `translateY(${-scrollY * 0.7}px)`}" />
       <Ground v-bind:style="{ transform: `translateY(${-scrollY * 0.9}px)`}" />
       <Wave3 v-bind:style="{ transform: `translateY(${-scrollY * 0.9}px)`}" />
       <Wave2 v-bind:style="{ transform: `translateY(${-scrollY * 0.92}px)`}" />
