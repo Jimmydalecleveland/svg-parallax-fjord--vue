@@ -105,9 +105,9 @@ body {
       <Cloud3 v-bind:style="{ transform: `translateY(${-scrollY * 0.3}px)`}" />
       <Hills v-bind:style="{ transform: `translateY(${-scrollY * 0.6}px)`}" />
       <Ground v-bind:style="{ transform: `translateY(${-scrollY * 0.9}px)`}" />
-      <Wave1 v-bind:style="{ transform: `translateY(${-scrollY * 0.9}px)`}" />
+      <Wave3 v-bind:style="{ transform: `translateY(${-scrollY * 0.9}px)`}" />
       <Wave2 v-bind:style="{ transform: `translateY(${-scrollY * 0.92}px)`}" />
-      <Wave3 v-bind:style="{ transform: `translateY(${-scrollY * 1}px)`}" />
+      <Wave1 v-bind:style="{ transform: `translateY(${-scrollY * 1}px)`}" />
     </div>
     <div class="foreground"></div>
   </div>
