@@ -6,30 +6,12 @@ import Cloud4 from './svgComponents/Cloud4'
 import Cloud5 from './svgComponents/Cloud5'
 import Mountains from './svgComponents/Mountains'
 import Hills from './svgComponents/Hills'
-// import Trees from './svgComponents/Trees'
-// import WindTrail from './svgComponents/WindTrail'
+import Trees from './svgComponents/Trees'
+import WindTrail from './svgComponents/WindTrail'
 import Ground from './svgComponents/Ground'
 import Wave1 from './svgComponents/Wave1'
 import Wave2 from './svgComponents/Wave2'
 import Wave3 from './svgComponents/Wave3'
-
-const layers = [
-  { component: Cloud2, speed: 0.2 },
-  { component: Cloud5, speed: 0.2 },
-  { component: Cloud4, speed: 0.2 },
-  { component: Mountains, speed: 0.3 },
-  { component: Cloud1, speed: 0.3 },
-  { component: Cloud3, speed: 0.3 },
-  { component: Hills, speed: 0.6 },
-  // { component: Trees, speed: 0.8 },
-  // { component: WindTrail, speed: 0.7 },
-  { component: Ground, speed: 0.9 },
-  { component: Wave3, speed: 0.9 },
-  { component: Wave2, speed: 0.92 },
-  { component: Wave1, speed: 1 },
-]
-
-console.log(layers)
 
 export default {
   name: 'App',
@@ -41,6 +23,8 @@ export default {
     Cloud5,
     Mountains,
     Hills,
+    Trees,
+    WindTrail,
     Ground,
     Wave1,
     Wave2,
@@ -117,6 +101,8 @@ body {
       <Cloud1 v-bind:style="{ transform: `translateY(${-scrollY * 0.3}px)`}" />
       <Cloud3 v-bind:style="{ transform: `translateY(${-scrollY * 0.3}px)`}" />
       <Hills v-bind:style="{ transform: `translateY(${-scrollY * 0.6}px)`}" />
+      <Trees v-bind:style="{ transform: `translateY(${-scrollY * 0.8}px)`}" />
+      <WindTrail v-bind:style="{ transform: `translateY(${-scrollY * 0.7}px)`}" />
       <Ground v-bind:style="{ transform: `translateY(${-scrollY * 0.9}px)`}" />
       <Wave3 v-bind:style="{ transform: `translateY(${-scrollY * 0.9}px)`}" />
       <Wave2 v-bind:style="{ transform: `translateY(${-scrollY * 0.92}px)`}" />
