@@ -50,6 +50,7 @@ export default {
         green: 135,
         blue: 213,
       },
+      isFilterOn: false,
     }
   },
   created() {
@@ -66,6 +67,9 @@ export default {
         green: 135 - window.scrollY / 17,
         blue: 213 - scrollY / 5.4,
       }
+
+      this.isFilterOn =
+        window.scrollY > this.$refs.seaFloorApproximation.$el.scrollHeight - 200
     },
   },
 }
@@ -125,16 +129,17 @@ body {
     </div>
     <div class="foreground">
       <SeaFloor3
+        ref="seaFloorApproximation"
         style="filter: url('#seaFloorFilter')"
-        v-bind:style="{ transform: `translateY(${scrollY * 0.38}px)`}"
+        v-bind:style="{ transform: `translateY(${scrollY * 0.38}px)`, filter: isFilterOn ? `url('#seaFloorFilter')` : ''}"
       />
       <SeaFloor2
         style="filter: url('#seaFloorFilter')"
-        v-bind:style="{ transform: `translateY(${scrollY * 0.25}px)`}"
+        v-bind:style="{ transform: `translateY(${scrollY * 0.25}px)`, filter: isFilterOn ? `url('#seaFloorFilter')` : ''}"
       />
       <SeaFloor1
         style="filter: url('#seaFloorFilter')"
-        v-bind:style="{ transform: `translateY(${scrollY * 0.13}px)`}"
+        v-bind:style="{ transform: `translateY(${scrollY * 0.13}px)`, filter: isFilterOn ? `url('#seaFloorFilter')` : ''}"
       />
       <SeaFloorFilter />
       <Sword />
