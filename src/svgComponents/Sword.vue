@@ -50,7 +50,7 @@ svg {
     transform: translate(0, -35%);
   }
   100% {
-    transform: translate(0, -120%);
+    transform: translate(0, -30%);
   }
 }
 
@@ -79,6 +79,7 @@ svg {
     animation-timing-function: cubic-bezier(0.9, 0.03, 0.69, 0.22);
   }
   100% {
+    transform-origin: top;
     transform: rotate(189deg);
   }
 }
