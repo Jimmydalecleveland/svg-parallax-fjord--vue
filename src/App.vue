@@ -12,6 +12,11 @@ import Ground from './svgComponents/Ground'
 import Wave1 from './svgComponents/Wave1'
 import Wave2 from './svgComponents/Wave2'
 import Wave3 from './svgComponents/Wave3'
+import SeaFloor1 from './svgComponents/SeaFloor1'
+import SeaFloor2 from './svgComponents/SeaFloor2'
+import SeaFloor3 from './svgComponents/SeaFloor3'
+import Sand from './svgComponents/Sand'
+import Sword from './svgComponents/Sword'
 
 export default {
   name: 'App',
@@ -29,6 +34,11 @@ export default {
     Wave1,
     Wave2,
     Wave3,
+    SeaFloor1,
+    SeaFloor2,
+    SeaFloor3,
+    Sand,
+    Sword,
   },
   data() {
     return {
@@ -79,10 +89,13 @@ body {
 
 .foreground {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  overflow: hidden;
   top: 965px;
-  left: 0;
+  height: 170vh;
   width: 100%;
-  height: 100vh;
   background-color: #37559c;
   color: white;
 }
@@ -108,6 +121,12 @@ body {
       <Wave2 v-bind:style="{ transform: `translateY(${-scrollY * 0.92}px)`}" />
       <Wave1 v-bind:style="{ transform: `translateY(${-scrollY * 1}px)`}" />
     </div>
-    <div class="foreground"></div>
+    <div class="foreground">
+      <SeaFloor3 />
+      <SeaFloor2 />
+      <SeaFloor1 />
+      <Sand />
+      <Sword />
+    </div>
   </div>
 </template>
