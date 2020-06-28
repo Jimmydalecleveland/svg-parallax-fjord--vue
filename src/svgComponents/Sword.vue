@@ -1,13 +1,17 @@
 <script>
 export default {
   name: 'Sword',
+  data() {
+    return {
+      isSwordFree: false,
+    }
+  },
   methods: {
-    goToBlog() {
-      console.log('GOING', this.$refs.sword)
-      this.$refs.sword.classList.add('draw')
-      new Promise(resolve => {
-        setTimeout(resolve, 1200)
-      }).then(() => (window.location.href = 'https://blog.jimmydc.com/'))
+    freeSword() {
+      this.isSwordFree = true
+      // new Promise(resolve => {
+      //   setTimeout(resolve, 1200)
+      // }).then(() => (window.location.href = 'https://blog.jimmydc.com/'))
     },
   },
 }
@@ -17,11 +21,12 @@ export default {
 svg {
   position: absolute;
   width: 70px;
+  cursor: pointer;
 }
 
-svg.draw {
-  transition: transform 1s cubic-bezier(0.97, -0.23, 0.69, 0.22);
-  transform: rotate(180deg) translateY(30%);
+.sword-free {
+  transition: transform 1s cubic-bezier(0.9, 0.03, 0.69, 0.22);
+  transform: rotate(189deg) translateY(-100%);
 }
 
 .cls-1 {
@@ -79,8 +84,8 @@ svg.draw {
 
 <template>
   <svg
-    ref="sword"
-    v-on:click="goToBlog"
+    v-bind:class="isSwordFree && 'sword-free'"
+    v-on:click="freeSword"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 119.58 603.12"
   >
