@@ -125,8 +125,8 @@ body {
       <SeaFloor3 />
       <SeaFloor2 />
       <SeaFloor1 />
-      <Sand />
       <Sword />
+      <Sand />
     </div>
   </div>
 </template>

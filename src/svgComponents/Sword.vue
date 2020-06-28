@@ -82,8 +82,6 @@ svg.draw {
     ref="sword"
     v-on:click="goToBlog"
     xmlns="http://www.w3.org/2000/svg"
-    width="119.58"
-    height="603.12"
     viewBox="0 0 119.58 603.12"
   >
     <g id="Layer_2" data-name="Layer 2">
