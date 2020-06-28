@@ -94,7 +94,7 @@ body {
   align-items: flex-end;
   overflow: hidden;
   top: 965px;
-  height: 170vh;
+  height: 1700px;
   width: 100%;
   background-color: #37559c;
   color: white;
@@ -122,9 +122,9 @@ body {
       <Wave1 v-bind:style="{ transform: `translateY(${-scrollY * 1}px)`}" />
     </div>
     <div class="foreground">
-      <SeaFloor3 />
-      <SeaFloor2 />
-      <SeaFloor1 />
+      <SeaFloor3 v-bind:style="{ transform: `translateY(${scrollY * 0.38}px)`}" />
+      <SeaFloor2 v-bind:style="{ transform: `translateY(${scrollY * 0.25}px)`}" />
+      <SeaFloor1 v-bind:style="{ transform: `translateY(${scrollY * 0.13}px)`}" />
       <Sword />
       <Sand />
     </div>

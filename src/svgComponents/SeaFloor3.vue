@@ -7,6 +7,7 @@ export default {
 <style scoped>
 svg {
   position: absolute;
+  bottom: 600px;
   width: 2560px;
 }
 .cls-1 {
