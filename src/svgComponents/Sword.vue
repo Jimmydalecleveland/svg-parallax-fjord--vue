@@ -9,9 +9,9 @@ export default {
   methods: {
     freeSword() {
       this.isSwordFree = true
-      // new Promise(resolve => {
-      //   setTimeout(resolve, 1200)
-      // }).then(() => (window.location.href = 'https://blog.jimmydc.com/'))
+      new Promise(resolve => {
+        setTimeout(resolve, 3300)
+      }).then(() => (window.location.href = 'https://blog.jimmydc.com/'))
     },
   },
 }
