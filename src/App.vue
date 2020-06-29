@@ -84,13 +84,12 @@ body {
 
 <style scoped>
 .parallax-container {
-  /* This container should stay fixed and centered on viewport resize */
+  background-color: #0087d5;
   position: fixed;
-  width: 2560px;
-  height: 1000px;
+  width: 800px;
+  height: 800px;
   left: 50%;
   transform: translate(-50%, 0);
-  background-color: #0087d5;
 }
 
 .foreground {
@@ -99,11 +98,31 @@ body {
   justify-content: center;
   align-items: flex-end;
   overflow: hidden;
-  top: 965px;
+  top: 560px;
   height: 1700px;
   width: 100%;
   background-color: #37559c;
-  color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .parallax-container {
+    width: 1200px;
+    height: 900px;
+  }
+  .foreground {
+    top: 666px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .parallax-container {
+    width: 2560px;
+    height: 1000px;
+  }
+
+  .foreground {
+    top: 965px;
+  }
 }
 </style>
 
