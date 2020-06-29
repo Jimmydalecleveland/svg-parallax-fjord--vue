@@ -8,12 +8,30 @@ export default {
 .parallax-wrapper {
   position: absolute;
 }
+
 svg {
   animation: wave1 10s ease-in-out infinite alternate;
+  width: 1000px;
+  height: 880px;
+}
+
+@media screen and (min-width: 768px) {
+  svg {
+    width: 1400px;
+    height: 1020px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  svg {
+    width: 2993.49px;
+    height: 1240px;
+  }
 }
 .cls-1 {
   fill: #37559c;
 }
+
 @keyframes wave1 {
   0% {
     transform: translate3d(0, 0, 0);
@@ -33,8 +51,6 @@ svg {
       id="wave_1"
       data-name="wave 1"
       xmlns="http://www.w3.org/2000/svg"
-      width="2993.49"
-      height="1265.51"
       viewBox="0 0 2993.49 1265.51"
     >
       <path
