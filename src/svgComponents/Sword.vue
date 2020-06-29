@@ -11,7 +11,11 @@ export default {
       this.isSwordFree = true
       new Promise(resolve => {
         setTimeout(resolve, 3300)
-      }).then(() => (window.location.href = 'https://blog.jimmydc.com/'))
+      }).then(
+        () =>
+          (window.location.href =
+            'https://blog.jimmydc.com/?source=parallaxfjord')
+      )
     },
   },
 }
