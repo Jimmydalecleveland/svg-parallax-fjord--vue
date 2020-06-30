@@ -15,7 +15,6 @@ import Wave3 from './svgComponents/Wave3'
 import SeaFloor1 from './svgComponents/SeaFloor1'
 import SeaFloor2 from './svgComponents/SeaFloor2'
 import SeaFloor3 from './svgComponents/SeaFloor3'
-import SeaFloorFilter from './svgComponents/SeaFloorFilter'
 import Sand from './svgComponents/Sand'
 import Sword from './svgComponents/Sword'
 
@@ -38,7 +37,6 @@ export default {
     SeaFloor1,
     SeaFloor2,
     SeaFloor3,
-    SeaFloorFilter,
     Sand,
     Sword,
   },
@@ -143,19 +141,9 @@ body {
       <Wave1 v-bind:style="{ transform: `translateY(${-scrollY * 1}px)`}" />
     </div>
     <div class="foreground">
-      <SeaFloor3
-        style="filter: url('#seaFloorFilter')"
-        v-bind:style="{ transform: `translateY(${scrollY * 0.38}px)`}"
-      />
-      <SeaFloor2
-        style="filter: url('#seaFloorFilter')"
-        v-bind:style="{ transform: `translateY(${scrollY * 0.25}px)`}"
-      />
-      <SeaFloor1
-        style="filter: url('#seaFloorFilter')"
-        v-bind:style="{ transform: `translateY(${scrollY * 0.13}px)`}"
-      />
-      <SeaFloorFilter />
+      <SeaFloor3 v-bind:style="{ transform: `translateY(${scrollY * 0.38}px)`}" />
+      <SeaFloor2 v-bind:style="{ transform: `translateY(${scrollY * 0.25}px)`}" />
+      <SeaFloor1 v-bind:style="{ transform: `translateY(${scrollY * 0.13}px)`}" />
       <Sword />
       <Sand />
     </div>
